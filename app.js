@@ -88,6 +88,8 @@ const toppings = [
   }
 ]
 
+// const orders = []
+// const toppingsOrders = []
 const orders = []
 console.log("spaceship")
 
@@ -98,6 +100,7 @@ function addtoCart(id){
    const item = toppings[i]
   if (item.id == id){
     orders.push(item)
+    // orders.toppingsOrders.push(item)
  }
  }
 
