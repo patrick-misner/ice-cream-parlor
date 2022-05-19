@@ -4,13 +4,13 @@ const iceCreams = [
   {
     id: 1,
     name: 'Vanilla',
-    image: '/assets/icecream/vanilla.jpeg',
+    image: 'assets/icecream/vanilla.jpeg',
     price: 1
   },
   {
     id: 2,
     name: 'Chocolate',
-    image: '/assets/icecream/chocolate.jpeg',
+    image: 'assets/icecream/chocolate.jpeg',
     price: 1
   },
   {
@@ -26,19 +26,19 @@ const vessels = [
   {
     id: 4,
     name: 'Bowl',
-    image: '/assets/vessels/bowl.jpeg',
+    image: 'assets/vessels/bowl.jpeg',
     price: 2
   },
   {
     id: 5,
     name: 'Mug',
-    image: '/assets/vessels/mug.jpeg',
+    image: 'assets/vessels/mug.jpeg',
     price: 3
   },
   {
     id: 6,
     name: 'Waffle Cone',
-    image: '/assets/vessels/wafflecone.jpeg',
+    image: 'assets/vessels/wafflecone.jpeg',
     price: 4
   }
 ]
@@ -47,43 +47,43 @@ const toppings = [
   {
     id: 7,
     name: 'Chocolate Chips',
-    image: '/assets/toppings/chocolatechips.jpeg',
+    image: 'assets/toppings/chocolatechips.jpeg',
     price: 1
   },
   {
     id: 8,
     name: 'Fish',
-    image: '/assets/toppings/fish.jpeg',
+    image: 'assets/toppings/fish.jpeg',
     price: 1
   },
   {
     id: 9,
     name: 'Gummy Bears',
-    image: '/assets/toppings/gummybears.jpeg',
+    image: 'assets/toppings/gummybears.jpeg',
     price: 1
   },
   {
     id: 10,
     name: 'Gummy Worms',
-    image: '/assets/toppings/gummyworms.jpeg',
+    image: 'assets/toppings/gummyworms.jpeg',
     price: 1
   },
   {
     id: 11,
     name: 'Raspberries',
-    image: '/assets/toppings/raspberries.jpeg',
+    image: 'assets/toppings/raspberries.jpeg',
     price: 1
   },
   {
     id: 12,
     name: 'Sand',
-    image: '/assets/toppings/sand.jpeg',
+    image: 'assets/toppings/sand.jpeg',
     price: 1
   },
   {
     id: 13,
     name: 'Sprinkles',
-    image: '/assets/toppings/sprinkles.jpeg',
+    image: 'assets/toppings/sprinkles.jpeg',
     price: 1
   }
 ]
@@ -124,7 +124,9 @@ function checkout(){
 
 function drawOrders(){
   let template = ''
+  let total = 0
   orders.forEach(order => {
+    total += order.price
     template += `
     <div class="col-12">
     <div class="row">
@@ -136,6 +138,7 @@ function drawOrders(){
   </div>
     `
   })
+  document.getElementById("total").innerText = total.toFixed(2)
   document.getElementById("order-list").innerHTML = template
 }
 
