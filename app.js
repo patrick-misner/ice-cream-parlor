@@ -150,7 +150,7 @@ function drawToppings(){
     <div class="col-md-4 p-3 text-center">
       <div class="card shadow rounded-bottom rounded-3" onclick="addtoCart(${topping.id})">
       <img class="w-100 object-cover p-2" height="200px" src="${topping.image}" alt="">
-      <h5 class="p-3">${topping.name} $${topping.price}</h5>
+      <h5 class="p-3">${topping.name} $${topping.price.toFixed(2)}</h5>
     </div>
   </div> 
     `
@@ -165,7 +165,7 @@ function drawVessels(){
     <div class="col-md-4 p-3 text-center">
     <div div class="card shadow rounded-bottom rounded-3" onclick="addtoCart(${vessel.id})">
     <img class="w-100 object-cover p-2" height="200px" src="${vessel.image}" alt="">
-    <h5 class="p-3">${vessel.name} $${vessel.price}</h5>
+    <h5 class="p-3">${vessel.name} $${vessel.price.toFixed(2)}</h5>
     </div>
   </div>
     `
@@ -180,7 +180,7 @@ function drawiceCreams(){
     <div class="col-md-4 p-3 text-center">
     <div div class="card shadow rounded-bottom rounded-3" onclick="addtoCart(${icecream.id})">
     <img class="w-100 object-cover p-2" height="200px" src="${icecream.image}" alt="">
-    <h5 class="p-3">${icecream.name} $${icecream.price}</h5>
+    <h5 class="p-3">${icecream.name} $${icecream.price.toFixed(2)}</h5>
     </div>
   </div>
     `
